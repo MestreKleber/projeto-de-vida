@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Um cronometro de vida bonito, responsivo e em tempo real.">
+    <title>Cronometro de Vida</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page-shell">
+        <section class="hero-panel glass-panel">
+            <div class="eyebrow-row">
+                <span class="eyebrow">cronometro de vida</span>
+                <span class="status-pill" id="statusMessage">Escolha uma data para iniciar.</span>
+            </div>
+
+            <h1>Seu tempo em movimento, com cara de obra de arte.</h1>
+            <p class="lede">
+                Acompanhe segundos, dias e marcos de uma forma mais cinematografica.
+                O painel atualiza sozinho e grava a data no proprio navegador.
+            </p>
+
+            <div class="controls-grid">
+                <label class="field">
+                    <span>Data de nascimento</span>
+                    <input id="birthdate" type="date" autocomplete="bday" max="9999-12-31">
+                </label>
+
+                <div class="button-row">
+                    <button id="saveBirthdate" type="button">Salvar</button>
+                    <button id="resetBirthdate" class="ghost" type="button">Redefinir</button>
+                </div>
+            </div>
+
+            <div class="hero-foot">
+                <span id="countdown">Sem aniversario calculado</span>
+                <span id="heartbeat">0 pulsos visuais por segundo</span>
+            </div>
+        </section>
+
+        <section class="focus-panel glass-panel">
+            <div class="orbital-frame">
+                <div class="orbital-ring" id="lifeProgress">
+                    <div class="orbital-core">
+                        <strong id="ageBadge">0,00 anos vividos</strong>
+                        <span id="lifeProgressText">0,0% da janela estimada de 90 anos</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-grid">
+            <article class="stat-card glass-panel">
+                <span>Segundos</span>
+                <strong id="secondsLived">0</strong>
+                <small>desde o primeiro instante.</small>
+            </article>
+            <article class="stat-card glass-panel">
+                <span>Minutos</span>
+                <strong id="minutesLived">0</strong>
+                <small>uma cadencia que nao para.</small>
+            </article>
+            <article class="stat-card glass-panel">
+                <span>Horas</span>
+                <strong id="hoursLived">0</strong>
+                <small>janelas de luz atravessadas.</small>
+            </article>
+            <article class="stat-card glass-panel">
+                <span>Dias</span>
+                <strong id="daysLived">0</strong>
+                <small>capitulos inteiros vividos.</small>
+            </article>
+            <article class="stat-card glass-panel">
+                <span>Semanas</span>
+                <strong id="weeksLived">0</strong>
+                <small>ritmo acumulado em blocos.</small>
+            </article>
+            <article class="stat-card glass-panel">
+                <span>Anos</span>
+                <strong id="yearsLived">0,00</strong>
+                <small>tempo convertido em historia.</small>
+            </article>
+            <article class="stat-card glass-panel accent-card">
+                <span>Respirações estimadas</span>
+                <strong id="breathsEstimate">0</strong>
+                <small>um retrato poetico do percurso.</small>
+            </article>
+            <article class="stat-card glass-panel accent-card">
+                <span>Batimentos estimados</span>
+                <strong id="beatsEstimate">0</strong>
+                <small>um pulso que nunca some da cena.</small>
+            </article>
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
